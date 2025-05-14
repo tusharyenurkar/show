@@ -19,7 +19,18 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 50)}>
+        <button
+          onClick={() => {
+            if (count < 200) {
+              setCount((count) => count + 50)
+              ;
+            }
+            else {
+              alert("Count has reached 200!");
+            }
+          }}
+          
+        >
           count is {count}
         </button>
         <p>
