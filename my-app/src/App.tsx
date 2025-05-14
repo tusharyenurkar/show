@@ -19,16 +19,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button 
-          onClick={() => {
-            if (count === 200) {
-              alert("Count is 200");
-              return;
-            }
-            setCount((count) => count + 50);
-          }}
-          disabled={count === 200}
-        >
+        <button onClick={() => setCount((count) => count + 50)}>
           count is {count}
         </button>
         <p>
@@ -39,7 +30,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>{name}</p>
-      <input type="text" onChange={(e) => setName(e.target.value)} />
+      <input type ="text" onChange={(e) => setName(e.target.value)}></input>
     </>
   )
 }
